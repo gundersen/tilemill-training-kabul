@@ -1,0 +1,84 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>Capital Camp: Making Maps</title> 
+  <script type='text/javascript' src='http://tilemill.com/jquery.js'></script> 
+  <script type='text/javascript' src='http://tilemill.com/showdown.js'></script> 
+  <script type="text/javascript"> 
+  // Application bootstrap.
+  $(function() {
+      // Convert any markdown sections to HTML.
+      $('.md').each(function() {
+          var html = $('<div></div>')
+              .html((new Showdown.converter()).makeHtml($(this).html()))
+              .attr('class', $(this).attr('class'))
+              .attr('id', $(this).attr('id'));
+          $(this).hide().after(html);
+          $('h1, h2, h3, h4, h5, h6', html).each(function() {
+              var cleaned = $(this).text().replace(/[\s\W]+/g, '-').toLowerCase();
+              $(this).attr('id', cleaned);
+          });
+      });
+  });
+</script> 
+<link href="kabul-tilemill-training/custom.css" media="screen" rel="stylesheet" type="text/css" /> </head> 
+<style type="text/css"> 
+body {
+font-family: "helvetica neue";
+font-size: 75%;
+line-height: 110%;
+background: none;
+}
+.md {width: 500px;
+background: rgba(255, 255, 255, .85);
+margin: 20px;
+padding: 20px;
+-webkit-border-radius: 10px;
+}
+</style> 
+<body> 
+<pre class='md'> 
+# Telling Stories w/ Maps: TileMill Kabul Training
+ 
+## About MapBox (10 Minutes)
+ 
+- [Slides](http://dl.dropbox.com/u/22916323/tilemill_ignite_dc_capital_camp.html)
+ 
+## Walkthrough (20 Minutes)
+ 
+- Data processing
+  - [Download data](http://www.whitehouse.gov/issues/fiscal/excess-property-map)
+  - [Edit / process spreadsheet](https://spreadsheets.google.com/a/developmentseed.org/spreadsheet/ccc?key=0AsM5Qb3AN9hMdE9uR0FBZzhFLTN2cE5nMXp6TnFTZ2c&hl=en_US#gid=0)
+  - [Geocode](https://github.com/mapbox/geo-googledocs/tree/geocoder)
+  - Export to GeoJSON
+  
+- Map design
+  - [Import your data to TileMill](http://tilemill.com)
+  - [Build stylesheet](code.html) 
+  - [Add interactivity](http://support.mapbox.com/kb/tilemill/styling-point-data-using-tilemill)
+  
+- Serving your maps
+  - [TileStream](https://github.com/mapbox/tilestream)
+  - [TileStream Hosting](http://mapbox.com/tilestream)
+ 
+- Distributing maps
+  - [Embedded maps](http://support.mapbox.com/kb/mapbox-tiles/using-mapbox-tiles-with-your-website)
+  - [Open Layers / MapBox module in Drupal](http://support.mapbox.com/kb/tilestream/using-tilestream-with-drupal)
+  
+## Discussion ( 15 Minutes)
+ 
+## Resources
+ 
+- [Mapping a Spreadsheet](http://support.mapbox.com/kb/tilemill/converting-addresses-in-spreadsheets-to-custom-maps-in-tilemill)
+- [Making a Geo-Enabled Blog](http://support.mapbox.com/kb/mapbox-tiles/building-a-geo-enabled-blog-with-drupal)
+- [TileMill for Windows](http://support.mapbox.com/kb/introduction-installation/tilemill-virtualbox-vm)
+- [Advanced web map integration](http://mapbox.github.com/wax/manual/index.html)
+ 
+## Contact
+ 
+- [http://support.mapbox.com](http://support.mapbox.com)
+- [dave@developmentseed.org](mailto:dave@developmentseed.org)
+- [@dhcole](http://twitter.com/dhcole)
+</pre> 
+</body> 
+</html>

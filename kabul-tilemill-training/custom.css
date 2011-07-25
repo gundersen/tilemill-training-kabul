@@ -1,0 +1,457 @@
+@font-face {
+  font-family:MuseoSans;
+  src: url('http://mapbox.github.com/support.mapbox.com/images/MuseoSans_500.otf');
+  }
+
+html {
+  background: #85C5D3 url(afghanistan_bg.jpg) no-repeat fixed 50% 100%;
+  color: #222;
+  }
+
+body {
+  margin:0px;
+  min-height:600px;
+  padding:0px 0px 60px;
+  line-height:20px;
+  }
+
+body,
+table td,
+h1, h2, h3, h4, h5, h6,
+.thread-action a,
+.footerbox h2,
+.maincol p,
+.sidebar p,
+.footerbox,
+.admin-functions { font:normal 12px/20px MuseoSans,'Lucida Grande',Tahoma,sans-serif; }
+
+form input.textfield,
+form textarea,
+#header #search input {
+  line-height:18px;
+  background:#fff;
+  border:1px solid #ccc;
+  border-color:#ccc #ddd #ddd;
+  padding:0px 2px;
+  resize:none;
+  box-shadow:inset #ddd 0px 2px 3px;
+  -moz-box-shadow:inset #ddd 0px 2px 3px;
+  -webkit-box-shadow:inset #ddd 0px 2px 3px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.footerbox a,
+a {
+  color: #49a;
+  text-decoration:none;
+  }
+
+.footerbox a:hover,
+a:hover {
+  color:#d10;
+  text-decoration:none;
+  }
+
+.form.discussion-form,
+.kb-search,
+.footerbox {
+  background:#eee;
+  box-shadow:inset #ccc 0px 1px 3px;
+  -moz-box-shadow:inset #ccc 0px 1px 3px;
+  -webkit-box-shadow:inset #ccc 0px 1px 3px;
+  }
+
+/*-----------------------
+  Wrapper
+-------------------------*/
+#wrapper {
+  position:relative;
+  margin:0px auto;
+  width:950px;
+  background:transparent;
+  }
+
+#superheader,
+#header,
+#content,
+#footer {
+  width:auto;
+  padding:0px;
+  margin:0px;
+  }
+
+.rule {
+  margin:20px -20px 20px;
+  border-color:#eee;
+  }
+
+/*-----------------------
+  Superheader
+-------------------------*/
+#superheader {
+  background:url(http://mapbox.github.com/support.mapbox.com/images/page.png) 0px 0px no-repeat;
+  border:0px;
+  margin:0px;
+  padding:0px 25px 10px;
+  height:50px;
+  line-height:50px;
+  color:#999;
+  }
+
+#superheader .inner {
+  text-transform: uppercase;
+  padding-left:200px;
+  margin:0px;
+  width:auto;
+  }
+
+#superheader a { color:#222; }
+
+#superheader ul#tender_nav {
+  line-height:20px;
+  margin:0px;
+  }
+
+#superheader ul#tender_nav li {
+  float:left;
+  border-left: 1px solid #EEE;
+  margin:0px;
+  padding:0px;
+  }
+
+#superheader ul#tender_nav li a {
+  display:block;
+  padding:15px;
+  }
+
+#superheader ul#tender_nav li.home { display:none; }
+
+#header #logo a {
+  position:absolute;
+  left:25px;
+  top:10px;
+  background: url(http://mapbox.github.com/support.mapbox.com/images/mapboxlogo.png) white no-repeat top left !important;
+  margin:0px !important;
+  padding:0px !important;
+  border:0px !important;
+  width:175px;
+  height:30px;
+  text-indent:-9999px;
+  overflow:hidden;
+  }
+
+#header #search {
+  position:absolute;
+  margin:0px;
+  top:14px;
+  left:710px;
+  right:auto;
+  bottom:auto;
+  }
+
+#header #search button {
+  text-indent: -9000px;
+  min-width: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+  border: 0 !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  background: url(http://mapbox.github.com/support.mapbox.com/images/search.png) 0 0 no-repeat;
+  }
+
+
+/*-----------------------
+  Columns
+-------------------------*/
+.columns { padding:0px; }
+.columns .maincol { width: 630px !important }
+.columns .sidebar { width:230px !important; }
+
+/*-----------------------
+  Footerbox
+-------------------------*/
+.footerbox {
+  margin-top:20px;
+  padding:20px;
+  width:860px;
+  }
+
+.footerbox .column { width:410px; }
+
+.footerbox table.listing,
+.footerbox table.listing td { border-color:#ddd; }
+
+table.listing span.icon { background: url(http://asset-0.tenderapp.com/help/images/icon_generic-black.gif?1282254413) no-repeat 0px 0px; }
+table.listing span.folder { background: url(http://mapbox.github.com/support.mapbox.com/images/icon_folder_black.gif) no-repeat 0px 0px; }
+table.listing span.questions { background-image: url(http://asset-0.tenderapp.com/help/images/icon_question-black.gif?1282254413); }
+table.listing span.problems { background-image: url(http://asset-2.tenderapp.com/help/images/icon_problem-black.gif?1282254413); }
+
+/*-----------------------
+  Front page
+-------------------------*/
+.sidebar .supportstaffer {
+  position:relative;
+  margin:0px 0px 15px;
+  height:25px;
+  line-height:25px;
+  padding:0px;
+  background:transparent;
+  }
+
+.sidebar .supportstaffer * { line-height:25px; }
+
+.sidebar .supportstaffer p { position:absolute;
+  top:0px;
+  right:0px;
+  }
+
+.sidebar .supportstaffer img.avatar { border:0px; }
+
+/*-----------------------
+  KB
+-------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size:15px;
+  padding:0px;
+  margin:0px 0px 20px;
+  border:0px;
+  }
+
+.columns h1,
+.maincol h1 {
+  font-size:28px;
+  line-height:30px;
+  letter-spacing:-1px;
+  margin:0px 0px 10px;
+  border:0px !important;
+  padding:0px;
+  }
+
+.maincol .article h2,
+.maincol .article h3 {
+  color:#49a;
+  font-size:20px;
+  border:0px !important;
+  }
+
+p.pagedesc,
+.maincol .article p,
+.maincol .article ul,
+.maincol .article ol,
+.maincol .article img {
+  font:normal 15px/20px Georgia,serif;
+  display:block;
+  padding:0px;
+  margin:0px 0px 20px;
+  max-width: 630px;
+  }
+
+.maincol .article img {
+  margin:0px auto 20px;
+  border:none;
+}
+
+.maincol .original-post a,
+.maincol .body a,
+.maincol .article a {
+  text-decoration:none;
+  border-bottom:1px solid #EEE;
+  }
+
+.maincol .meta {
+  font:normal 12px/20px MuseoSans,'Lucida Grande',Tahoma,sans-serif !important;
+  margin:0px 0px 20px;
+  }
+
+.maincol .meta img,
+.maincol .meta p,
+.maincol .meta a {
+  font:normal 12px/20px MuseoSans,'Lucida Grande',Tahoma,sans-serif !important;
+  margin:0px;
+  border:0px;
+  }
+
+#article-show .sidebar dl.stats {
+  margin-top:0;
+}
+
+ul.categories {
+  background:#f0f8fa no-repeat 20px 50%;
+  padding:20px;
+  margin:0px;
+  width:auto;
+  box-shadow:inset #acd 0px 1px 3px;
+  -moz-box-shadow:inset #acd 0px 1px 3px;
+  -webkit-box-shadow:inset #acd 0px 1px 3px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  }
+
+ul.categories h3,
+ul.categories li,
+ul.categories ul { margin:0px; }
+
+ul.categories li {
+  width:410px;
+  padding:0px;
+  }
+
+ul.articles li { border-color:#e0e8ea; }
+
+ul.categories li.odd { margin-right:40px; }
+
+/*-----------------------
+  Footer
+-------------------------*/
+#footer {
+  width:900px;
+  margin:0px;
+  border:0px;
+  height:20px;
+  padding:10px 25px 25px;
+  background:url(http://mapbox.github.com/support.mapbox.com/images/page.png) 0px 0px no-repeat;
+  }
+
+#footer p.copyleft { float:left; }
+
+/*-----------------------
+  Administrative
+-------------------------*/
+.admin-functions {
+  background:#666;
+  padding:5px 15px;
+  }
+
+#user_nav,
+#superheader p.welcome,
+#header .sticky_queue {
+  z-index:100;
+  position:fixed;
+  top:auto;
+  left:auto;
+  right:auto;
+  bottom:0px;
+
+  background:url(http://mapbox.github.com/support.mapbox.com/images/mask.png) no-repeat;
+  line-height:20px !important;
+  margin:0px !important;
+  padding:10px 15px !important;
+
+  color:#aaa;
+  text-transform:none;
+
+  border-radius:3px 3px 0px 0px;
+  -moz-border-radius:3px 3px 0px 0px;
+  -webkit-border-radius:3px 3px 0px 0px;
+  }
+
+#header .sticky_queue {
+  background: #ace759;
+  right:50%;
+  margin-right:-470px !important;
+  border-radius:0px 3px 0px 0px;
+  -moz-border-radius:0px 3px 0px 0px;
+  -webkit-border-radius:0px 3px 0px 0px;
+  }
+
+#user_nav li {
+  border-color:#666 !important;
+  padding:0px 10px;
+  }
+
+#superheader p.welcome a,
+#user_nav a {
+  padding:0px;
+  color:#fff;
+  }
+
+#user_nav a.watched-inbox { padding-right:20px; }
+
+#superheader p.welcome {
+  left:50%;
+  width:880px !important;
+  padding-left:45px !important;
+  margin-left:-470px !important;
+  }
+
+#user_nav {
+  left:50%;
+  width:890px !important;
+  padding-left:35px !important;
+  margin-left:-470px !important;
+  }
+
+#header .sticky_queue .toggle {
+  background:transparent;
+  border:0px;
+  padding:0px;
+  color: #fff;
+  }
+
+#header .sticky_queue .toggle strong { color: #222; }
+body.logged-in #superheader p.welcome { display:none; }
+
+/* Sticky queue popbox */
+body .sticky-queue-box {
+  border:0px;
+  padding:5px 5px 0px;
+  margin-right:-470px;
+  position:fixed;
+  bottom:0px;
+  top:auto;
+  z-index:1001;
+  background:url(http://mapbox.github.com/support.mapbox.com/images/mask.png) 100% 0% repeat-y;
+  border-radius:3px 3px 0px 0px;
+  -moz-border-radius:3px 3px 0px 0px;
+  -webkit-border-radius:3px 3px 0px 0px;
+  }
+
+body .sticky-queue-box .popbox-inner {
+  border:0px;
+  background:#fff;
+  }
+
+/*-----------------------
+  Discussion/thread UI
+-------------------------*/
+.thread-action {
+  position:absolute;
+  top:0px;
+  right:0px;
+  }
+
+.thread-action a,
+.thread-action a:hover {
+  background:#74bccc;
+  color:#fff;
+  padding:5px 15px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+.articlelist * { margin:0px !important; }
+
+table.thread-listing,
+table.discussion-listing { border:0px }
+table.discussion-listing th,
+table.discussion-listing td { border-right:0px; }
+
+/*-----------------------
+  TODO
+-------------------------*/
+ul.states li.current { background: url(http://mapbox.github.com/support.mapbox.com/images/state_active_back.png) no-repeat 0px 100%; }
+
+.flash { margin:0px 0px 20px; }
